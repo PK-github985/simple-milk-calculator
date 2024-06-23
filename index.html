@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,8 @@
             <!-- Example for 31 days, adjust as needed -->
             <!-- Note: You can dynamically generate these inputs with JavaScript if needed -->
             <input type="number" id="day1" placeholder="Day 1" min="0" step="0.01">
-            <input type="number" id="day2" placeholder="Day 2" min="0" step="0.01"> <input type="number" id="day3" name="day3" min="0" step="0.01" placeholder="Day 3">
+            <input type="number" id="day2" placeholder="Day 2" min="0" step="0.01">
+            <input type="number" id="day3" name="day3" min="0" step="0.01" placeholder="Day 3">
         <input type="number" id="day4" name="day4" min="0" step="0.01" placeholder="Day 4">
         <input type="number" id="day5" name="day5" min="0" step="0.01" placeholder="Day 5">
         <input type="number" id="day6" name="day6" min="0" step="0.01" placeholder="Day 6">
@@ -43,8 +44,7 @@
         <input type="number" id="day28" name="day28" min="0" step="0.01" placeholder="Day 28">
         <input type="number" id="day29" name="day29" min="0" step="0.01" placeholder="Day 29">
         <input type="number" id="day30" name="day30" min="0" step="0.01" placeholder="Day 30">
-        <input type="number" id="day31" name="day31" min="0" step="0.01" placeholder="Day 31">
-            <!-- Repeat for all days -->
+        <input type="number" id="day31" name="day31" min="0" step="0.01" placeholder="Day 31"> <!-- Repeat for all days -->
         </div>
         <label for="costPerLiter">Cost per liter (in rupees):</label>
         <input type="number" id="costPerLiter" min="0" step="0.01">
@@ -60,11 +60,12 @@
             <div id="billDetails">
                 <h2>Bill Details</h2>
                 <table id="billTable">
-                    <!-- Table for displaying day-wise milk quantities -->
+                    <!-- Table for displaying day-wise milk quantities and cost -->
                     <thead>
                         <tr>
                             <th>Day</th>
                             <th>Quantity (Liters)</th>
+                            <th>Cost (Rupees)</th>
                         </tr>
                     </thead>
                     <tbody>
