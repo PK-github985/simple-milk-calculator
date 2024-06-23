@@ -1,4 +1,4 @@
-﻿// Function to calculate the total cost
+// Function to calculate the total cost
 function calculateTotal() {
     const costPerLiter = parseFloat(document.getElementById('costPerLiter').value) || 0;
     let totalQuantity = 0;
@@ -18,10 +18,10 @@ function calculateTotal() {
     // Calculate total cost
     const totalCost = totalQuantity * costPerLiter;
 
-    // Display total cost in popup
+    // Display total cost
     document.getElementById('totalCost').textContent = 'Total cost for the month: ' + totalCost.toFixed(2) + ' rupees';
 
-    // Display bill details in popup
+    // Display bill details in print section
     const tableBody = document.querySelector('#billTable tbody');
     tableBody.innerHTML = '';
     days.forEach(day => {
@@ -29,21 +29,10 @@ function calculateTotal() {
         tableBody.insertAdjacentHTML('beforeend', row);
     });
 
-    // Show the popup
-    document.getElementById('billDetailsPopup').style.display = 'block';
-}
+    // Show the print section and print button
+    const printSection = document.getElementById('printSection');
+    printSection.style.display = 'block';
 
-// Function to close the popup
-function closePopup() {
-    document.getElementById('billDetailsPopup').style.display = 'none';
-}
-
-// Function to print the bill
-function printBill() {
-    const printContent = document.getElementById('billDetails').innerHTML;
-    const originalContent = document.body.innerHTML;
-
-    document.body.innerHTML = printContent;
-    window.print();
-    document.body.innerHTML = originalContent;
+    const printButton = document.getElementById('printButton');
+    printButton.style.display = 'block';
 }
