@@ -72,3 +72,10 @@ button:hover {
     max-height: 70vh; /* Limit max height of popup content */
     overflow-y: auto; /* Add scroll for overflow content */
 }
+.footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #333;
+}
