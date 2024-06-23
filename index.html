@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Milk Cost Calculator</h1>
+    <form id="milkForm">
+        <label>Enter milk quantity (in liters) for each day:</label>
+        <div id="dayInputs">
+            <!-- Input fields for each day -->
+            <!-- Example for 31 days, adjust as needed -->
+            <!-- Note: You can dynamically generate these inputs with JavaScript if needed -->
+            <input type="number" id="day1" placeholder="Day 1" min="0" step="0.01">
+            <input type="number" id="day2" placeholder="Day 2" min="0" step="0.01"> <input type="number" id="day3" name="day3" min="0" step="0.01" placeholder="Day 3">
+        <input type="number" id="day4" name="day4" min="0" step="0.01" placeholder="Day 4">
+        <input type="number" id="day5" name="day5" min="0" step="0.01" placeholder="Day 5">
+        <input type="number" id="day6" name="day6" min="0" step="0.01" placeholder="Day 6">
+        <input type="number" id="day7" name="day7" min="0" step="0.01" placeholder="Day 7">
+        <input type="number" id="day8" name="day8" min="0" step="0.01" placeholder="Day 8">
+        <input type="number" id="day9" name="day9" min="0" step="0.01" placeholder="Day 9">
+        <input type="number" id="day10" name="day10" min="0" step="0.01" placeholder="Day 10">
+        <input type="number" id="day11" name="day11" min="0" step="0.01" placeholder="Day 11">
+        <input type="number" id="day12" name="day12" min="0" step="0.01" placeholder="Day 12">
+        <input type="number" id="day13" name="day13" min="0" step="0.01" placeholder="Day 13">
+        <input type="number" id="day14" name="day14" min="0" step="0.01" placeholder="Day 14">
+        <input type="number" id="day15" name="day15" min="0" step="0.01" placeholder="Day 15">
+        <input type="number" id="day16" name="day16" min="0" step="0.01" placeholder="Day 16">
+        <input type="number" id="day17" name="day17" min="0" step="0.01" placeholder="Day 17">
+        <input type="number" id="day18" name="day18" min="0" step="0.01" placeholder="Day 18">
+        <input type="number" id="day19" name="day19" min="0" step="0.01" placeholder="Day 19">
+        <input type="number" id="day20" name="day20" min="0" step="0.01" placeholder="Day 20">
+        <input type="number" id="day21" name="day21" min="0" step="0.01" placeholder="Day 21">
+        <input type="number" id="day22" name="day22" min="0" step="0.01" placeholder="Day 22">
+        <input type="number" id="day23" name="day23" min="0" step="0.01" placeholder="Day 23">
+        <input type="number" id="day24" name="day24" min="0" step="0.01" placeholder="Day 24">
+        <input type="number" id="day25" name="day25" min="0" step="0.01" placeholder="Day 25">
+        <input type="number" id="day26" name="day26" min="0" step="0.01" placeholder="Day 26">
+        <input type="number" id="day27" name="day27" min="0" step="0.01" placeholder="Day 27">
+        <input type="number" id="day28" name="day28" min="0" step="0.01" placeholder="Day 28">
+        <input type="number" id="day29" name="day29" min="0" step="0.01" placeholder="Day 29">
+        <input type="number" id="day30" name="day30" min="0" step="0.01" placeholder="Day 30">
+        <input type="number" id="day31" name="day31" min="0" step="0.01" placeholder="Day 31">
+            <!-- Repeat for all days -->
+        </div>
+        <label for="costPerLiter">Cost per liter (in rupees):</label>
+        <input type="number" id="costPerLiter" min="0" step="0.01">
+        <br>
+        <button type="button" onclick="calculateTotal()">Calculate</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <!-- Popup for displaying bill details -->
+    <div id="billDetailsPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="billDetails">
+                <h2>Bill Details</h2>
+                <table id="billTable">
+                    <!-- Table for displaying day-wise milk quantities -->
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Quantity (Liters)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be dynamically added here -->
+                    </tbody>
+                </table>
+                <p id="totalCost">Total cost for the month: </p>
+            </div>
+            <button onclick="printBill()">Print Bill</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
