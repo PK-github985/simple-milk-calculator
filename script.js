@@ -30,7 +30,49 @@ function calculateTotal() {
     });
 
     // Show the popup
-    document.getElementById('billDetailsPopup').style.display = 'block';
+    const popup = document.getElementById('billDetailsPopup');
+    popup.style.display = 'block';
+
+    // Make the popup draggable
+    makeDraggable(popup);
+}
+
+// Function to make the popup draggable
+function makeDraggable(popup) {
+    const header = popup.querySelector('#popupHeader');
+    let offsetX, offsetY;
+
+    header.addEventListener('mousedown', startDrag);
+
+    function startDrag(e) {
+        e.preventDefault();
+
+        // Get the initial mouse position
+        offsetX = e.clientX - popup.offsetLeft;
+        offsetY = e.clientY - popup.offsetTop;
+
+        // Move the popup along with the mouse movement
+        document.addEventListener('mousemove', dragPopup);
+        document.addEventListener('mouseup', endDrag);
+    }
+
+    function dragPopup(e) {
+        e.preventDefault();
+
+        // Calculate the new popup position
+        const newLeft = e.clientX - offsetX;
+        const newTop = e.clientY - offsetY;
+
+        // Update the popup position
+        popup.style.left = newLeft + 'px';
+        popup.style.top = newTop + 'px';
+    }
+
+    function endDrag(e) {
+        // Stop dragging
+        document.removeEventListener('mousemove', dragPopup);
+        document.removeEventListener('mouseup', endDrag);
+    }
 }
 
 // Function to close the popup
