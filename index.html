@@ -55,10 +55,12 @@
 
     <!-- Popup for displaying bill details -->
     <div id="billDetailsPopup" class="popup">
+        <div class="popup-header" id="popupHeader">
+            <h2 style="margin: 0;">Bill Details</h2>
+        </div>
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
             <div id="billDetails">
-                <h2>Bill Details</h2>
                 <table id="billTable">
                     <!-- Table for displaying day-wise milk quantities and cost -->
                     <thead>
