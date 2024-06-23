@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     margin: 20px;
@@ -67,6 +67,8 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     position: relative;
+    overflow-y: auto; /* Add scroll for overflow content */
+    max-height: 80%; /* Limit max height of popup content */
 }
 
 .popup-content .close {
