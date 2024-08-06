@@ -89,3 +89,8 @@ function printBill() {
     window.print();
     document.body.innerHTML = originalContent;
 }
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
