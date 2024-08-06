@@ -1,17 +1,28 @@
+:root {
+    --background-color: #f0f8ff;
+    --text-color: #333;
+    --form-background: #fff;
+    --form-border: #ddd;
+    --button-background: #4CAF50;
+    --button-hover-background: #45a049;
+    --popup-background: rgba(255, 255, 255, 0.9);
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    background-color: var(--background-color);
     margin: 20px;
+    color: var(--text-color);
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
     text-align: center;
 }
 
 form {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--form-background);
+    border: 1px solid var(--form-border);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,14 +40,14 @@ input[type="number"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ddd;
+    border: 1px solid var(--form-border);
     border-radius: 5px;
 }
 
 button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: var(--button-background);
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--button-hover-background);
 }
 
 .popup {
@@ -53,7 +64,7 @@ button:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--popup-background);
     border: 1px solid #888;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 999;
@@ -61,21 +72,32 @@ button:hover {
 
 .popup-header {
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: var(--button-background);
     color: white;
-    cursor: move; /* Cursor changes to indicate draggable */
-    user-select: none; /* Prevents text selection while dragging */
+    cursor: move;
+    user-select: none;
 }
 
 .popup-content {
     padding: 20px;
-    max-height: 70vh; /* Limit max height of popup content */
-    overflow-y: auto; /* Add scroll for overflow content */
+    max-height: 70vh;
+    overflow-y: auto;
 }
+
 .footer {
     position: fixed;
     bottom: 10px;
     right: 10px;
     font-size: 12px;
-    color: #333;
+    color: var(--text-color);
+}
+
+.dark-mode {
+    --background-color: #2e2e2e;
+    --text-color: #f0f0f0;
+    --form-background: #3c3c3c;
+    --form-border: #555;
+    --button-background: #5c5c5c;
+    --button-hover-background: #6d6d6d;
+    --popup-background: rgba(60, 60, 60, 0.9);
 }
